@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraTest01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TqY-x7-ZVS">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="TfW-aI-CHu"/>
+                                    <barButtonItem systemItem="play" id="dUF-Lz-6Ar">
+                                        <connections>
+                                            <action selector="doCapturePhoto:" destination="BYZ-38-t0r" id="8cs-4v-hHt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="aXp-F7-ZQi"/>
+                                    <barButtonItem systemItem="save" id="jI7-IT-Ymi">
+                                        <connections>
+                                            <action selector="doSavePhoto:" destination="BYZ-38-t0r" id="ECb-VD-PjG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NP8-r0-hbu">
+                                <rect key="frame" x="0.0" y="428" width="600" height="128"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TqY-x7-ZVS" secondAttribute="bottom" id="PYa-ZO-SHf"/>
+                            <constraint firstItem="NP8-r0-hbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="RrN-p5-HHw"/>
+                            <constraint firstItem="TqY-x7-ZVS" firstAttribute="top" secondItem="NP8-r0-hbu" secondAttribute="bottom" id="Yn6-M0-dL0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NP8-r0-hbu" secondAttribute="trailing" constant="-20" id="dCh-u6-rAY"/>
+                            <constraint firstItem="TqY-x7-ZVS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ePN-BZ-PcG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TqY-x7-ZVS" secondAttribute="trailing" constant="-20" id="nk9-K1-97k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureButton" destination="dUF-Lz-6Ar" id="xVN-OE-1UQ"/>
+                        <outlet property="previewScroll" destination="NP8-r0-hbu" id="tbF-IX-yMX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="248"/>
+        </scene>
+    </scenes>
+</document>
